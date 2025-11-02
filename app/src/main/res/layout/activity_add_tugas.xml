@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AddTugasActivity">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/HeadingTextView"
+        android:text="Tambah Tugas"
+        android:textSize="24sp"
+        android:layout_marginTop="12dp"
+        android:layout_marginStart="12dp"
+        android:textColor="@color/softBlue"
+        />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/SaveImageView"
+        android:src="@drawable/outline_archive_24"
+        android:layout_marginTop="12dp"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="12dp"
+        android:tint="@color/softBlue"
+        />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:id="@+id/namaTugasEditText"
+        android:layout_below="@+id/HeadingTextView"
+        android:background="@drawable/border"
+        android:hint="Nama Tugas..."
+        android:layout_marginTop="6dp"
+        android:layout_marginStart="6dp"
+        android:layout_marginEnd="6dp"
+        android:padding="12dp"
+        />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:id="@+id/mataKuliahEditText"
+        android:layout_below="@+id/namaTugasEditText"
+        android:background="@drawable/border"
+        android:hint="Mata Kuliah..."
+        android:layout_marginTop="6dp"
+        android:layout_marginStart="6dp"
+        android:layout_marginEnd="6dp"
+        android:padding="12dp"
+        />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:id="@+id/namaDosenEditText"
+        android:layout_below="@+id/mataKuliahEditText"
+        android:background="@drawable/border"
+        android:hint="Dosen Pengampu..."
+        android:layout_marginTop="6dp"
+        android:layout_marginStart="6dp"
+        android:layout_marginEnd="6dp"
+        android:padding="12dp"
+        />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:id="@+id/deadlineEditText"
+        android:layout_below="@+id/namaDosenEditText"
+        android:background="@drawable/border"
+        android:hint="Deadline..."
+        android:layout_marginTop="6dp"
+        android:layout_marginStart="6dp"
+        android:layout_marginEnd="6dp"
+        android:padding="12dp"
+        />
+
+</RelativeLayout>

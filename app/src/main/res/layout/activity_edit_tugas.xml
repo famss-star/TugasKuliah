@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AddTugasActivity">
+
+    <TextView
+        android:id="@+id/editTugasHeading"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="16dp"
+        android:layout_marginStart="6dp"
+        android:text="Edit Tugas"
+        android:textColor="@color/softBlue"
+        android:textSize="24sp"
+        />
+
+    <ImageView
+        android:id="@+id/editSaveButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/outline_add_24"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="6dp"
+        android:layout_marginTop="6dp"
+        android:tint="@color/softBlue"
+        android:layout_alignTop="@id/editTugasHeading"
+        />
+
+    <EditText
+        android:id="@+id/editNamaTugasEditText"
+        android:hint="Nama Tugas..."
+        android:padding="12dp"
+        android:textSize="18sp"
+        android:maxLines="1"
+        android:layout_marginTop="7dp"
+        android:layout_marginStart="6dp"
+        android:layout_marginEnd="6dp"
+        android:layout_below="@id/editTugasHeading"
+        android:background="@drawable/border"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        />
+
+    <EditText
+        android:id="@+id/editMataKuliahEditText"
+        android:hint="Mata Kuliah..."
+        android:padding="12dp"
+        android:textSize="18sp"
+        android:maxLines="1"
+        android:layout_marginTop="7dp"
+        android:layout_marginStart="6dp"
+        android:layout_marginEnd="6dp"
+        android:layout_below="@id/editNamaTugasEditText"
+        android:background="@drawable/border"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        />
+
+    <EditText
+        android:id="@+id/editNamaDosenEditText"
+        android:hint="Dosen Pengampu..."
+        android:padding="12dp"
+        android:textSize="18sp"
+        android:maxLines="1"
+        android:layout_marginTop="7dp"
+        android:layout_marginStart="6dp"
+        android:layout_marginEnd="6dp"
+        android:layout_below="@id/editMataKuliahEditText"
+        android:background="@drawable/border"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        />
+
+    <EditText
+        android:id="@+id/editDeadlineEditText"
+        android:hint="Deadline..."
+        android:padding="12dp"
+        android:textSize="18sp"
+        android:maxLines="1"
+        android:layout_marginTop="7dp"
+        android:layout_marginStart="6dp"
+        android:layout_marginEnd="6dp"
+        android:layout_below="@id/editNamaDosenEditText"
+        android:background="@drawable/border"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        />
+</RelativeLayout>
