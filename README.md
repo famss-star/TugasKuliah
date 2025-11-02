@@ -108,10 +108,10 @@ Aplikasi ini menggunakan data model `Tugas` dengan struktur:
 
 ```kotlin
 data class Tugas(
-    val tugas: String,        // Nama tugas
-    val matakuliah: String,   // Nama mata kuliah
-    val namadosen: String,    // Nama dosen
-    val deadline: String      // Tanggal deadline
+    val tugas :String,        // Nama tugas
+    val matakuliah :String,   // Nama mata kuliah
+    val namadosen :String,    // Nama dosen
+    val deadline :String      // Tanggal deadline
 )
 ```
 
