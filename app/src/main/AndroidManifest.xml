@@ -12,6 +12,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.TugasKuliah">
         <activity
+            android:name=".DetailTugasActivity"
+            android:exported="false" />
+        <activity
             android:name=".EditTugasActivity"
             android:exported="false" />
         <activity

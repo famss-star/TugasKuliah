@@ -1,85 +1,172 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
+<LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/backgroundLight"
     tools:context=".AddTugasActivity">
 
-    <TextView
-        android:layout_width="wrap_content"
+    <!-- Header Simple -->
+    <RelativeLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/HeadingTextView"
-        android:text="Tambah Tugas"
-        android:textSize="24sp"
-        android:layout_marginTop="12dp"
-        android:layout_marginStart="12dp"
-        android:textColor="@color/softBlue"
-        />
+        android:background="@color/white"
+        android:padding="20dp"
+        android:elevation="4dp">
 
-    <ImageView
-        android:layout_width="wrap_content"
+        <TextView
+            android:id="@+id/HeadingTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:text="Tambah Tugas"
+            android:layout_centerInParent="true"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="@color/textPrimary"
+            android:fontFamily="sans-serif-medium" />
+
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="20dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Nama Tugas"
+                android:textColor="@color/textPrimary"
+                android:textSize="13sp"
+                android:textStyle="bold"
+                android:layout_marginBottom="6dp" />
+
+            <EditText
+                android:id="@+id/namaTugasEditText"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@drawable/input_selector"
+                android:hint="Masukkan nama tugas..."
+                android:textColorHint="@color/textTertiary"
+                android:textColor="@color/textPrimary"
+                android:textSize="15sp"
+                android:layout_marginBottom="16dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Mata Kuliah"
+                android:textColor="@color/textPrimary"
+                android:textSize="13sp"
+                android:textStyle="bold"
+                android:layout_marginBottom="6dp" />
+
+            <EditText
+                android:id="@+id/mataKuliahEditText"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@drawable/input_selector"
+                android:hint="Masukkan mata kuliah..."
+                android:textColorHint="@color/textTertiary"
+                android:textColor="@color/textPrimary"
+                android:textSize="15sp"
+                android:layout_marginBottom="16dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Dosen Pengampu"
+                android:textColor="@color/textPrimary"
+                android:textSize="13sp"
+                android:textStyle="bold"
+                android:layout_marginBottom="6dp" />
+
+            <EditText
+                android:id="@+id/namaDosenEditText"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@drawable/input_selector"
+                android:hint="Masukkan nama dosen..."
+                android:textColorHint="@color/textTertiary"
+                android:textColor="@color/textPrimary"
+                android:textSize="15sp"
+                android:layout_marginBottom="16dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Deskripsi"
+                android:textColor="@color/textPrimary"
+                android:textSize="13sp"
+                android:textStyle="bold"
+                android:layout_marginBottom="6dp" />
+
+            <EditText
+                android:id="@+id/deskripsiEditText"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:background="@drawable/input_selector"
+                android:hint="Masukkan deskripsi..."
+                android:textColorHint="@color/textTertiary"
+                android:textColor="@color/textPrimary"
+                android:textSize="15sp"
+                android:gravity="top"
+                android:layout_marginBottom="16dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Deadline"
+                android:textColor="@color/textPrimary"
+                android:textSize="13sp"
+                android:textStyle="bold"
+                android:layout_marginBottom="6dp" />
+
+            <TextView
+                android:id="@+id/deadlineTextView"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@drawable/input_selector"
+                android:hint="Pilih tanggal dan waktu..."
+                android:textColorHint="@color/textTertiary"
+                android:textColor="@color/textPrimary"
+                android:textStyle="bold"
+                android:gravity="center_vertical"
+                android:paddingStart="16dp"
+                android:paddingEnd="16dp"
+                android:textSize="15sp"
+                android:clickable="true"
+                android:focusable="true"
+                android:drawableEnd="@drawable/time_picker"
+                android:drawableTint="@color/blue" />
+
+        </LinearLayout>
+    </ScrollView>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/saveButton"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/SaveImageView"
-        android:src="@drawable/outline_archive_24"
-        android:layout_marginTop="12dp"
-        android:layout_alignParentEnd="true"
-        android:layout_marginEnd="12dp"
-        android:tint="@color/softBlue"
-        />
+        android:layout_margin="16dp"
+        android:padding="14dp"
+        android:text="Simpan Tugas"
+        android:textSize="16sp"
+        app:backgroundTint="@color/blue"
+        app:cornerRadius="12dp"
+        app:iconPadding="8dp"
+        app:iconTint="@color/white"
+        app:icon="@drawable/save_button"/>
 
-    <EditText
-        android:layout_width="match_parent"
-        android:layout_height="60dp"
-        android:id="@+id/namaTugasEditText"
-        android:layout_below="@+id/HeadingTextView"
-        android:background="@drawable/border"
-        android:hint="Nama Tugas..."
-        android:layout_marginTop="6dp"
-        android:layout_marginStart="6dp"
-        android:layout_marginEnd="6dp"
-        android:padding="12dp"
-        />
-
-    <EditText
-        android:layout_width="match_parent"
-        android:layout_height="60dp"
-        android:id="@+id/mataKuliahEditText"
-        android:layout_below="@+id/namaTugasEditText"
-        android:background="@drawable/border"
-        android:hint="Mata Kuliah..."
-        android:layout_marginTop="6dp"
-        android:layout_marginStart="6dp"
-        android:layout_marginEnd="6dp"
-        android:padding="12dp"
-        />
-
-    <EditText
-        android:layout_width="match_parent"
-        android:layout_height="60dp"
-        android:id="@+id/namaDosenEditText"
-        android:layout_below="@+id/mataKuliahEditText"
-        android:background="@drawable/border"
-        android:hint="Dosen Pengampu..."
-        android:layout_marginTop="6dp"
-        android:layout_marginStart="6dp"
-        android:layout_marginEnd="6dp"
-        android:padding="12dp"
-        />
-
-    <EditText
-        android:layout_width="match_parent"
-        android:layout_height="60dp"
-        android:id="@+id/deadlineEditText"
-        android:layout_below="@+id/namaDosenEditText"
-        android:background="@drawable/border"
-        android:hint="Deadline..."
-        android:layout_marginTop="6dp"
-        android:layout_marginStart="6dp"
-        android:layout_marginEnd="6dp"
-        android:padding="12dp"
-        />
-
-</RelativeLayout>
+</LinearLayout>
